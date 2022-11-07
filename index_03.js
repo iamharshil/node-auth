@@ -1,27 +1,22 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.set("view engine" , 'ejs');
-
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render('index', { name: "harsh"});
+  res.render("index", { name: "harsh" });
 });
 
-app.get('/login', (req, res) => {
-    res.render('login');
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
-app.post('/login', (req, res, next) => {
+app.post("/login", (req, res, next) => {});
 
+app.get("/register", (req, res) => {
+  res.render("register");
 });
 
-app.get('/register', (req, res) => {
-    res.render('register');
-});
-
-app.post('/login', (req, res, next) => {
-
-});
+app.post("/login", (req, res, next) => {});
 
 app.listen(3000);
